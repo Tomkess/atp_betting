@@ -24,9 +24,14 @@ def createFolder(directory):
             os.makedirs(directory)
     except OSError:
         print ('Error: Creating directory. ' +  directory)
+
+# - Create Folders for Downloaded Data
 createFolder(path)
 createFolder(path + '/men')
 createFolder(path + '/women')
+
+# - Create Folders for Generated Data
+createFolder("C:/Users/Peter.Tomko/OneDrive - 4Finance/concept/ATPBetting/Generated Data")
 
 ## ----- Get Initial Website ----- ##
 page = urlopen('http://www.tennis-data.co.uk/alldata.php')
