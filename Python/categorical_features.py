@@ -42,7 +42,7 @@ def features_players_encoding(data):
     for i in range(len(losers)):
         encod[i, losers[i]] += 1
     
-    columns = ["player_"+el for el in le.classes_]
+    columns = ["player_" + el for el in le.classes_]
     players_encoded = pd.DataFrame(encod,columns = columns)
     return players_encoded
 
