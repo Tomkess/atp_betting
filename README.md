@@ -39,3 +39,15 @@ Within the project we use the data freely available on the website - http://www.
 `from sklearn.model_selection import cross_val_score`
 
 ### Code Evaluation
+
+Sequence of codes that needs to be run
+
+* `data_download.py` (this downloads the data for project)
+
+* `create_modelling_data.py`
+
+* `create_features.py` (this creates the features for each player and match, the code should run using parallelization)
+
+* `model_estimation.py` (xgboost model estimation)
+
+* `Beating the bookmakers on tennis matches.ipynb` (this summarizes the result of the project)
