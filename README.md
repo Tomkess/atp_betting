@@ -13,6 +13,29 @@ Within the project we use the data freely available on the website - http://www.
 `from urllib.request import urlopen`
 
 `from bs4 import BeautifulSoup`
+
 `from zipfile import ZipFile`
+
 `from io import BytesIO`
+
 `import os`
+
+`import pandas as pd`
+
+`import numpy as np`
+
+`import multiprocessing`
+
+`from datetime import datetime`
+
+`from datetime import timedelta`
+
+`import glob`
+
+`from datetime import datetime`
+
+`from xgboost import XGBClassifier`
+
+`from sklearn.model_selection import cross_val_score`
+
+### Code Evaluation
