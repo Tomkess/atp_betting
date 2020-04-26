@@ -42,9 +42,9 @@ Within the project we use the data freely available on the website - http://www.
 
 Sequence of codes that needs to be run
 
-* `data_download.py` (this downloads the data for project)
+* `data_download.py` (this downloads the data for project, this code should create a folder "Downloaded Data" in which the files are stored)
 
-* `create_modelling_data.py`
+* `create_modelling_data.py` (in the "Generated Data" flder the modelling data are stored)
 
 * `create_features.py` (this creates the features for each player and match, the code should run using parallelization)
 
