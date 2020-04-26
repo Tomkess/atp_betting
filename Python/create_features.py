@@ -4,6 +4,10 @@ import pandas as pd
 import numpy as np
 import multiprocessing
 
+## ----- Set files locations ----- ##
+modelling_loc = "C:/Users/Peter.Tomko/OneDrive - 4Finance/concept/ATPBetting/Generated Data/modelling_data.csv"
+features_loc = "C:/Users/Peter.Tomko/OneDrive - 4Finance/concept/ATPBetting/Generated Data/atp_data_features.csv"
+
 ## ----- FEATURES BASED ON THE PAST OF THE PLAYERS ----- ##
 def features_past(data_input, last_n, date_input, player_name):
     """
@@ -91,7 +95,7 @@ def var_calc(i_input):
                                   player_name = player_sel)
     return pd.DataFrame(features_data)
 
-modelling_data = pd.read_csv("C:/Users/Peter.Tomko/OneDrive - 4Finance/concept/ATPBetting/Generated Data/modelling_data.csv")
+modelling_data = pd.read_csv(modelling_loc)
 unique_matches = modelling_data[['Date', 'Player']].drop_duplicates()
 
 def handler():
@@ -102,4 +106,4 @@ def handler():
 out = None
 if __name__ == '__main__':
     out = pd.concat(handler()).reset_index(drop = True)
-    out.to_csv("C:/Users/Peter.Tomko/OneDrive - 4Finance/concept/ATPBetting/Generated Data/atp_data_features.csv", index = False)
+    out.to_csv(features_loc, index = False)
