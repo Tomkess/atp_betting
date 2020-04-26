@@ -1,5 +1,7 @@
 ## Tennis Match prediction with betting strategy based on the Sharpe Ratio
 
+blogpost here: https://medium.com/@tomko5peter/betting-on-grand-slam-aa35d6a9da71
+
 ### Description:
 
 The goal of the project is using machine learning techniques predict the result of tennis matches. Furthermore, the prediction are then used for the optimization model that provides the optimal betting stakes for four major Grandslams - French Open, Wimbledon, Australian Open and US Open.
