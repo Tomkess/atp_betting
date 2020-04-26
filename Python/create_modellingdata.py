@@ -6,17 +6,15 @@ from datetime import datetime
 from datetime import timedelta
 from elo_features import *
 from categorical_features import *
-from stategy_assessment import *
 import glob
 import pandas as pd
 import numpy as np
-import xgboost as xgb
-import sklearn
-from sklearn.model_selection import StratifiedKFold, KFold
 
-###############################################################################
-## Data Preparation - Download, Preprocessing, Features #######################
-###############################################################################
+## ----- Set files locations ----- ##
+atp_loc = "C:/Users/Peter.Tomko/OneDrive - 4Finance/concept/ATPBetting/Generated Data/atp_data.csv"
+modelling_loc = "C:/Users/Peter.Tomko/OneDrive - 4Finance/concept/ATPBetting/Generated Data/modelling_data.csv"
+m_downloaded_loc = "C:/Users/Peter.Tomko/OneDrive - 4Finance/concept/ATPBetting/Downloaded Data/men/20*.xls*"
+w_downloaded_loc = "C:/Users/Peter.Tomko/OneDrive - 4Finance/concept/ATPBetting/Downloaded Data/women/20*.xls*"
 
 ## ----- Building of the raw dataset ----- ##
 
@@ -24,7 +22,7 @@ from sklearn.model_selection import StratifiedKFold, KFold
 # Some preprocessing is necessary because for several years the odds are not present
 # We consider only the odds of Bet365 and Pinnacle.
 
-filenames = list(glob.glob("C:/Users/Peter.Tomko/OneDrive - 4Finance/concept/ATPBetting/Downloaded Data/men/20*.xls*")) + list(glob.glob("C:/Users/Peter.Tomko/OneDrive - 4Finance/concept/ATPBetting/Downloaded Data/women/20*.xls*"))
+filenames = list(glob.glob(m_downloaded_loc)) + list(glob.glob(w_downloaded_loc))
 l = [pd.read_excel(filename, encoding = 'latin-1') for filename in filenames]
 no_b365 = [i for i,d in enumerate(l) if "B365W" not in l[i].columns]
 no_pi = [i for i,d in enumerate(l) if "PSW" not in l[i].columns]
@@ -61,8 +59,8 @@ data.drop(['Round', 'Best of', 'ATP', 'Location', 'Tier', 'Series'],
           axis = 1, inplace = True)
 
 # - storage of the raw dataset
-data.to_csv("C:/Users/Peter.Tomko/OneDrive - 4Finance/concept/ATPBetting/Generated Data/atp_data.csv", index = False)
-data = pd.read_csv("C:/Users/Peter.Tomko/OneDrive - 4Finance/concept/ATPBetting/Generated Data/atp_data.csv")
+data.to_csv(atp_loc, index = False)
+data = pd.read_csv(atp_loc)
 data.Date = data.Date.apply(lambda x:datetime.strptime(x, '%Y-%m-%d'))
 
 ## ----- The period that interests us ----- ##
@@ -92,4 +90,4 @@ master_l['proba_elo'] = 1 - master_l['proba_elo']
 master_l['win_loss'] = 0
 
 modelling_data = master_w.append(master_l)
-modelling_data.to_csv("C:/Users/Peter.Tomko/OneDrive - 4Finance/concept/ATPBetting/Generated Data/modelling_data.csv", index = False)
+modelling_data.to_csv(modelling_loc, index = False)
