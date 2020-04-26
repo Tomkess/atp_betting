@@ -8,7 +8,7 @@ The goal of the project is using machine learning techniques predict the result 
 
 Within the project we use the data freely available on the website - http://www.tennis-data.co.uk/alldata.php.
 
-### Modules used
+### Modules used:
 
 `from urllib.request import urlopen`
 
@@ -38,7 +38,7 @@ Within the project we use the data freely available on the website - http://www.
 
 `from sklearn.model_selection import cross_val_score`
 
-### Code Evaluation
+### Code Evaluation:
 
 Sequence of codes that needs to be run
 
