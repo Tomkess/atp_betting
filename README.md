@@ -10,12 +10,9 @@ Within the project we use the data freely available on the website - http://www.
 
 ### Modules used
 
-**from urllib.request import urlopen**
+`from urllib.request import urlopen`
 
-from bs4 import BeautifulSoup
-
-from zipfile import ZipFile
-
-from io import BytesIO
-
-import os
+`from bs4 import BeautifulSoup`
+`from zipfile import ZipFile`
+`from io import BytesIO`
+`import os`
