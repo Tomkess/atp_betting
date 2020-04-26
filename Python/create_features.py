@@ -77,6 +77,10 @@ def features_past(data_input, last_n, date_input, player_name):
     return feature_vector
 
 def var_calc(i_input):
+    """
+    Input - index from unique_matches
+    Output - features data frame
+    """
     # for i in range(0, len(unique_matches)):
     # - i = 10000
     
@@ -99,6 +103,9 @@ modelling_data = pd.read_csv(modelling_loc)
 unique_matches = modelling_data[['Date', 'Player']].drop_duplicates()
 
 def handler():
+    """
+    This handles multiprocessing to make computations faster.
+    """
     p = multiprocessing.Pool(6)
     r = p.map(var_calc, range(0, len(unique_matches)))
     return r

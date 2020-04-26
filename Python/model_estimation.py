@@ -47,7 +47,10 @@ xtrain, xtest, ytrain, ytest, p_data = data_split(data_input = features_data,
 def xgboost_fit(n_estimators, learning_rate, min_child_weight, 
                 max_depth, gamma, subsample, reg_alpha, colsample,
                 weight):
-    
+    """
+    Input - parameters of the model
+    Output model and accuracy from cross validation.
+    """
     n_estimators = int(n_estimators)
     max_depth = int(max_depth)
     min_child_weight = int(min_child_weight)
