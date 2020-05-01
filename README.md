@@ -54,7 +54,7 @@ Sequence of codes that needs to be run
 
 * `data_download.py` (this downloads the data for project, this code should create a folder "Downloaded Data" in which the files are stored)
 
-Downloaded data are archived in the folder `Downlaoded Data` - there are 2 archives (`men`, and `women`).
+Downloaded data are archived in the folder `Downloaded Data` - there are 2 archives (`men`, and `women`).
 
 * `Data Exploration and Visualization.ipynb` (Data Exploration and Visualization)
 
