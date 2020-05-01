@@ -2,13 +2,21 @@
 
 blogpost here: https://medium.com/@tomko5peter/betting-on-grand-slam-aa35d6a9da71
 
-### Description:
+### Project Overview:
 
-The goal of the project is using machine learning techniques predict the result of tennis matches. Furthermore, the prediction are then used for the optimization model that provides the optimal betting stakes for four major Grandslams - French Open, Wimbledon, Australian Open and US Open.
+The goal of the project is to analyze betting strategy in tennis Grand Slams. Using machine learning model, the underlying probability model of match result is being investigated. Based on the prediction model, we apply optimization technique for optimal allocation of bet stakes. Betting strategy is evaluated in the Jupyter notebook `Beating the bookmakers on tennis matches.ipynb`.
 
-### Data:
+### Project statement:
 
-Within the project we use the data freely available on the website - http://www.tennis-data.co.uk/alldata.php.
+Is there any source of predictability in betting industry? Is there a way to create an edge over bookmakers in long-run? Is there a subset of tennis betting industry that might create a profitable opportunities? The project aims to apply machine learning approach with combination of optimization model in order to evaluate possible long-run profitability in tennis betting.
+
+### Input Data:
+
+Within the project we use the data freely available on the website - **http://www.tennis-data.co.uk/alldata.php**. We use men and women results in Grand Slams in period from 2000.
+
+### Betting Strategy Evaluation/Metrics
+
+The betting strategy is evaluated in period from 1/1/2019 up to the most recently available results in the year 2020. The optimization uses daily matches - the decision about optimal stakes is delivered using the Sharpe ratio maximization (technique heavily used in the field of financial markets). The metric used for betting strategy evaluation is a **net cumulative profit**.
 
 ### Modules used:
 
@@ -46,9 +54,9 @@ Sequence of codes that needs to be run
 
 * `data_download.py` (this downloads the data for project, this code should create a folder "Downloaded Data" in which the files are stored)
 
-* `create_modelling_data.py` (in the "Generated Data" flder the modelling data are stored)
+* `create_modelling_data.py` (in the "Generated Data" folder the modelling data are stored)
 
-* `create_features.py` (this creates the features for each player and match, the code should run using parallelization)
+* `create_features.py` (this creates the features for each player and match, the code should run using parallelization, cca. 45min)
 
 * `model_estimation.py` (xgboost model estimation)
 
