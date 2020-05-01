@@ -60,6 +60,8 @@ Sequence of codes that needs to be run
 
 * `create_features.py` (this creates the features for each player and match, the code should run using parallelization, cca. 45min)
 
+If the archive Generated Data.7z is unzipped into the project directory, there is no need to run prevous sequence of codes.
+
 * `model_estimation.py` (xgboost model estimation)
 
 * `Beating the bookmakers on tennis matches.ipynb` (this summarizes the result of the project)
