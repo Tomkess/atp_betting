@@ -58,7 +58,7 @@ Downloaded data are archived in the folder `Downloaded Data` - there are 2 archi
 
 * `Data Exploration and Visualization.ipynb` (Data Exploration and Visualization)
 
-* `create_modelling_data.py` (in the "Generated Data" folder the modelling data are stored)
+* `create_modellingdata.py` (in the "Generated Data" folder the modelling data are stored)
 
 * `create_features.py` (this creates the features for each player and match, the code should run using parallelization, cca. 45min)
 
