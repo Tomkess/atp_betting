@@ -54,13 +54,15 @@ Sequence of codes that needs to be run
 
 * `data_download.py` (this downloads the data for project, this code should create a folder "Downloaded Data" in which the files are stored)
 
+Downloaded data are archived in the folder `Downloaded Data` - there are 2 archives (`men`, and `women`).
+
 * `Data Exploration and Visualization.ipynb` (Data Exploration and Visualization)
 
-* `create_modelling_data.py` (in the "Generated Data" folder the modelling data are stored)
+* `create_modellingdata.py` (in the "Generated Data" folder the modelling data are stored)
 
 * `create_features.py` (this creates the features for each player and match, the code should run using parallelization, cca. 45min)
 
-If the archive Generated Data.7z is unzipped into the project directory, there is no need to run prevous sequence of codes.
+If the archive Generated Data.7z is unzipped into the project directory, there is no need to run previous sequence of codes.
 
 * `model_estimation.py` (xgboost model estimation)
 
