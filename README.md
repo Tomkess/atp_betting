@@ -6,7 +6,7 @@ blogpost here: https://medium.com/@tomko5peter/betting-on-grand-slam-aa35d6a9da7
 
 The goal of the project is to analyze betting strategy in tennis Grand Slams. Using machine learning model, the underlying probability model of match result is being investigated. Based on the prediction model, we apply optimization technique for optimal allocation of bet stakes. Betting strategy is evaluated in the Jupyter notebook `Beating the bookmakers on tennis matches.ipynb`.
 
-### Project statement:
+### Project Statement:
 
 Is there any source of predictability in betting industry? Is there a way to create an edge over bookmakers in long-run? Is there a subset of tennis betting industry that might create a profitable opportunities? The project aims to apply machine learning approach with combination of optimization model in order to evaluate possible long-run profitability in tennis betting.
 
@@ -18,7 +18,7 @@ Within the project we use the data freely available on the website - **http://ww
 
 The betting strategy is evaluated in period from 1/1/2019 up to the most recently available results in the year 2020. The optimization uses daily matches - the decision about optimal stakes is delivered using the Sharpe ratio maximization (technique heavily used in the field of financial markets). The metric used for betting strategy evaluation is a **net cumulative profit**. Furthermore, within the project we use also cumulative accuracy - i.e. daily precision of the betting rolling daily from the beginning of the year 2019.
 
-### Modules used:
+### Modules Used:
 
 `from urllib.request import urlopen`
 
