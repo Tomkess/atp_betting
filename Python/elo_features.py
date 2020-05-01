@@ -5,7 +5,7 @@ import numpy as np
 
 def compute_elo_rankings(data):
     """
-    Input - cleaned loaded data from folder Data/
+    Input - cleaned loaded data
     Output - elo ranking for each player before the match (see more info here: https://en.wikipedia.org/wiki/Elo_rating_system)
     Note: K selected to be 32
     """
