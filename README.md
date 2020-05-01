@@ -16,7 +16,7 @@ Within the project we use the data freely available on the website - **http://ww
 
 ### Betting Strategy Evaluation/Metrics
 
-The betting strategy is evaluated in period from 1/1/2019 up to the most recently available results in the year 2020. The optimization uses daily matches - the decision about optimal stakes is delivered using the Sharpe ratio maximization (technique heavily used in the field of financial markets). The metric used for betting strategy evaluation is a **net cumulative profit**.
+The betting strategy is evaluated in period from 1/1/2019 up to the most recently available results in the year 2020. The optimization uses daily matches - the decision about optimal stakes is delivered using the Sharpe ratio maximization (technique heavily used in the field of financial markets). The metric used for betting strategy evaluation is a **net cumulative profit**. Furthermore, within the project we use also cumulative accuracy - i.e. daily precision of the betting rolling daily from the beginning of the year 2019.
 
 ### Modules used:
 
